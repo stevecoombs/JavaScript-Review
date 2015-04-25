@@ -4,6 +4,12 @@ var threeItems = [1,2,3];
 
   //code here
 
+var last = function(inputArray) {
+	return threeItems[threeItems.length-1];
+}
+
+alert(last(threeItems));
+
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
