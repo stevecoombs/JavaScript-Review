@@ -37,13 +37,27 @@ evens(evenArray);
 
 
 
-//below you're given a function that will return a random number between 0 and 30 and an array full or numbers 'randomArray'. Your job is to write a function that will get a random number, then loop through the array to see if that random number is in the array. If it is, alert true, if it's not, alert false
+//below you're given a function that will return a random number between 0 and 30 and an array full or numbers 'randomArray'. 
+//Your job is to write a function that will get a random number, then loop through the array to see if that random number is in the array. 
+//If it is, alert true, if it's not, alert false
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * (30 - 0) + 0);
 }
 var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
   //code here
+
+var rando = function(gra, arr) {
+	var randomNum = gra;
+	for (var i = 0; i < arr.length-1; i++) {
+		if (randomNum === arr[i]) {
+			return alert(true);
+		}
+	}
+	return alert(false);
+}
+
+rando(getRandomArbitrary(), randomArray);
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
