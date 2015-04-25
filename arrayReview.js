@@ -21,6 +21,17 @@ var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
   //code here
 
+var evens = function(arr) {
+	for (var i = arr.length-1; i >= 0; i--) {
+		if (arr[i] % 2) {
+			arr.splice(i, 1);
+		}
+	}
+	alert(arr)
+}
+
+evens(evenArray);
+
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
