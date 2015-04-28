@@ -31,6 +31,14 @@ last(names, function(lastName){
 
 //have the contains function return a boolean value for if the name is in the array or not.
 
+var contains = function(str, arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === str) {
+      return cb(true);
+    }
+  }
+  return cb(false);
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains('Colt', names, function(yes){
@@ -47,6 +55,13 @@ contains('Colt', names, function(yes){
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
+var map = function(arr, cb) {
+  var arr2 = [];
+  for (var i = 0; i < arr.length; i++) {
+    arr2[i] = cb(arr[i]);
+  }
+  return arr2
+}
 
 
 var numbers = [1,2,3,4,5];
@@ -58,9 +73,19 @@ map(numbers, function(num){
 
 
 
+
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
+var uniq = function(arr, cb) {
+  var newArr = [];
+  for (var i in arr) {
+    if (newArr.indexOf(arr[i]) === -1) {
+      newArr.push(arr[i]);
+    };
+  };
+  cb(newArr);
+};
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -74,11 +99,18 @@ uniq(names, function(uniqArr){
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
+var each = function(arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    var place = arr[i];
+    var thing = i;
+    cb(place, thing);
+  }
+}
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
-  console.log('The item in the ' + indice + 'position is ' + item)
+  console.log('The item in the ' + indice + ' position is ' + item)
 });
 
 
@@ -87,6 +119,13 @@ each(names, function(item, indice){
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
+var getUserById = function(obj, arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    if (obj === arr[i].id) {
+      cb(arr[i]);
+    }
+  }
+}
 
 
 var users = [
@@ -110,7 +149,7 @@ var users = [
   },
 ];
 getUserById('16t', users, function(user){
-  console.log('The user with the id 16t has the email of ' + user.email + 'the name of ' + user.name + ' and the address of ' + user.address); 
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
 });
 
 
