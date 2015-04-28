@@ -157,7 +157,13 @@ getUserById('16t', users, function(user){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var find = function(arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      return arr[i];
+    };
+  };
+};
 
 
 //Looks through each value in the list, returning the first one that passes a truth test 
