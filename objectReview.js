@@ -104,9 +104,39 @@ methodCollection.logHello();
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
+var vowler = function(str) {
+  var a = 0;
+  var e = 0;
+  var i = 0;
+  var o = 0;
+  var u = 0;
+  for (var j = 0; j < str.length; j++) {
+    if (str[j] === 'a') {
+      a++;
+    } else if (str[j] === 'e') {
+      e++;  
+    } else if (str[j] === 'i') {
+      i++;
+    } else if (str[j] === 'o') {
+      o++;
+    } else if (str[j] === 'u') {
+      u++;
+    }
+  }
+  var obj = {
+    a: a, 
+    e: e, 
+    i: i,
+    o: o,
+    u: u
+  };
+  return obj;
+}
 
+console.log(vowler("This is a test"));
 
-//write a function called voweler that accepts a string, and returns an object with the keys being all the vowels in that string, and the values being how many times that particular vowel was in the string.
+//write a function called voweler that accepts a string, and returns an object with the keys being all the vowels in that string, and the values 
+//being how many times that particular vowel was in the string.
 //voweler("This is a test") --> {i: 2, a: 1, e: 1};
 
 
